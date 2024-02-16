@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+#titulo {
+    font-size: 3.2rem;
+}
+
+#numero {
+    font-size: 5rem;
+}
+
+button {
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    transition: transform 1ms;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #c8c8c8;
+}

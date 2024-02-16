@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Git</title>
+    <style>
+        body p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resumo Git</h1>
+    <h2>Teoria</h2>
+    <hr>
+    <p><strong>Versionamento de Código: </strong>O versionamento de código é o processo de criar novas versões de um código toda vez que existir uma mudança significativa nele. De maneira geral, todo projeto de desenvolvimento é feito por etapas, sendo que as funcionalidades são incrementadas aos poucos. Por isso, é preciso criar versões que possam ser retomadas sempre que necessário. Em outras palavras, o versionamento de código é como ter vários arquivos, sendo que cada um conta com melhorias em comparação com o anterior. Porém, em vez de ter que salvar muitos arquivos (o que é inviável para a computação e para a organização), são feitas essas versões, direto no código. Assim, enquanto o código está sendo desenvolvido, o programador vai criando as versões conforme melhora, muda ou implementa algo. Depois, é possível voltar às versões anteriores caso seja necessário. Por conta disso, o versionamento de código faz parte das boas práticas de programação e se torna importante para a organização do projeto, consegue contribuir com o trabalho em equipe e também criar um “backup” de todas as mudanças.</p>
+    <p><strong>Git: </strong>O Git é uma ferramenta que permite gerenciar o código-fonte de aplicativos, sistemas e produtos. Ele mantém o histórico das modificações feitas nos arquivos, permitindo que você volte atrás e recupere o estado do sistema em qualquer momento. Imagine poder comparar as mudanças feitas hoje com as de um ano atrás, encontrar bugs e estudar otimizações. O Git torna isso possível.</p>
+    <p><strong>GitHub: </strong>GitHub é uma plataforma de hospedagem de código-fonte e colaboração de desenvolvimento de software.</p>
+    <p><strong>Branch: </strong>Uma branch é uma ramificação do seu projeto, que permite trabalhar em mudanças no código sem afetar a versão principal. As branches são usadas para testar novas funções, corrigir erros ou experimentar ideias isoladamente. No Git e no GitHub, a branch main é a branch padrão e representa o código de produção.</p>
+    <p><strong>Commit: </strong>Um commit é um registro das alterações feitas em um ou mais arquivos no seu branch.</p>
+    <h2>Comandos</h2>
+    <hr>
+    <p><strong>git config</strong> -- ver comandos git.</p>
+    <p><strong>git init</strong> -- inicializar repositório local. Você pode criar um reporsitório na sua máquina (mkdir new-project) e depois entrar dentro dele (cd new-project) e iniciar o reporsitório git init.</p>
+    <p><strong>git add README.md ou touch README.md</strong> -- para criar um arquivo README</p>
+    <p><strong>git status</strong> -- mostrar o status da área de preparação e o estado dos arquivos.</p>
+    <p><strong>https://readme.so/pt</strong> -- Link para editar um arquivo README. Depois que você editar você pode copiar o que está lá e cola em seu arquivo README.</p>
+    <p><strong>Docs GitHub</strong> -- Na parte da documentação do GitHub, que é escrevendo com o GitHub, tem exemplos de como editar esse arquivo, tipo cmo criar um título, um link ...</p>
+    <p><strong>git add</strong> -- Adicionar arquivos</p>
+    <p><strong>git commit -m "mesagem"</strong> -- Faz um commit e passa uma mesagem em relação a esse commit.</p>
+    <p><strong>git log</strong> -- Mostar o histórico do commits.</p>
+    <p><strong>.gitkeep</strong> -- Quando uma pasta está vazia ela não vai ser adicionada. Ser você vê alguma pasta com um arquivo .gitkeep, é para adicionar aquela pasta sem precisar criar arquivos dentro dela naquele momento.</p>
+    <p><strong>.gitignore</strong> -- Você pode colocar pasta e arquivo que não quer que sejam carregados para o GitHub.</p>
+    <p><strong>rm -rf .git</strong> -- Caso você tenha dado um git init sem querer em uma pasta errada, você pode usar esse comando para desfazer.</p>
+    <p><strong>git restore nome_do_arquivo</strong> -- Para desfazer alterações. Vamos supor que você tenha adicionado um configuração em um arquivo (se você dê git status ele vai está modificado), mas depois resolveu voltar a como era antes. Então é so executar esse comando.</p>
+    <p><strong>git commit --amend -m "nova mesagem"</strong> -- Para mudar mesagem do último commit.</p>
+    <p><strong>git reset --soft hash_do_commit</strong> -- Ele vai desfazer os commits prosteriores ao commit passado(desfazer os commits que vierão depois do que passou o hash), e os arquivos que estavam nos commist desfeitos ficarão como você tivesse feito um git add neles.</p>
+    <p><strong>git reset --mixed hash_do_commit</strong> -- Ele vai desfazer os commits prosteriores ao commit passado(desfazer os commits que vierão depois do que passou o hash), e os arquivos que estavam nos commist desfeitos ficarão como você nao tivesse feito um git add neles, ou seja, ficarão na área de preparação.</p>
+    <p><strong>git reset --hard hash_do_commit</strong> -- Ele vai desfazer os commits prosteriores ao commit passado(desfazer os commits que vierão depois do que passou o hash), e os arquivos que estavam nos commist desfeitos também serão desfeitos, apagados.</p>
+    <p><strong>git remote add origin https://github.com/leonardoddantas/resumo-git-e-github.git</strong> -- Vai conectar o reporsotório local com o remoto.</p>
+    <p><strong>git branch -M main</strong> -- Vai forçar mudar para branch main caso não esteja ainda, tipo a master.</p>
+    <p><strong>git push -u origin main</strong> -- Vai mandar as alterações feitas no reporsitório local para o remoto.</p>
+    <p><strong>.</strong> -- No GitHub dentro de um reporsitório se você apertar "." vai abrir um editor de texto.</p>
+    <p><strong>git checkout -b nome_da_branch</strong> -- Vai trocar a branch que você está para a nova que você criou.</p>
+    <p><strong>git checkout nome_da_branch</strong> -- Vai trocar a branch que você está para a outra que você passou, aqui essa outra tem que existir.</p>
+    <p><strong>git pull</strong> -- Vai trazer alterações do reporsitório remoto e mescar com o local. git pull = git fetch (traz as alterações) + git merge (mescar as alterações).</p>
+    <p><strong>git fetch origin nome_da_branch</strong> -- Vai tazer as alterações do remoto. Mas não vai mescar com o local.</p>
+    <p><strong>git merge nome_da_branch</strong> -- Vai mescar/unir as duas branchs.</p>
+    <p><strong>git diff main origin/main</strong> -- Mostar o que tem de diferentes entre as duas. Ai se quiser mescar essas alterações é só dá um git merge origin/nome_da_branch</p>
+    <p><strong>git branch -v</strong> -- Mostar as branch e seus últimos commits.</p>
+    <p><strong>git branch</strong> -- Mostar as branch existentes.</p>
+    <p><strong>git branch -d nome_da_branch</strong> -- Apagar a branch.</p>
+    <p><strong>git clone https://github.com/leonardoddantas/resumo-git-e-github.git</strong> -- Faz uma copia da branch main do reporsitório remoto no local</p>
+    <p><strong>git clone https://github.com/leonardoddantas/resumo-git-e-github.git --branch nome_da_branch --single-branch</strong> -- Faz uma copia da branch que você passou do reporsitório remoto no local</p>
+    <h2>Links</h2>
+    <hr>
+    <a href="https://github.com/elidianaandrade/dio-curso-git-github">Reporsitório do curso com anotações</a>
+    <br>
+    <a href="https://academiapme-my.sharepoint.com/:p:/g/personal/renato_dio_me/EYjkgVZuUv5HsVgJUEPv1_oB_QWs8MFBY_PBQ2UAtLqucg?rtime=FlFYX8Lp20g">Slides utilizados nas aulas</a>
+</body>
+</html>

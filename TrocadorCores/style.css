@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #009dff;
+    color: #ffffff;
+}
+
+#btnGerarCor {
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: #040404c4;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+#btnGerarCor:hover {
+    transform: scale(1.1);
+    background-color: #040404;
+}
